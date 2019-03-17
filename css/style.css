@@ -39,8 +39,11 @@ body * {box-sizing: border-box}
 
 .navHeader {
     display: flex;
+    display: -webkit-flex;
     height: auto;
     justify-content: space-between;
+    justify-content: -webkit-space-between;
+
 }
 
 #pic {
