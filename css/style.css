@@ -35,6 +35,9 @@ body * {box-sizing: border-box}
     background-image: url("../images/Grunge Green.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+     -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size:cover;
 }
 
 .navHeader {
