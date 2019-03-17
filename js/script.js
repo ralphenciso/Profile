@@ -11,6 +11,7 @@ var moreTxt = document.querySelector('#moreText');
 navMenu.addEventListener('click', function(e){
     nav.classList.toggle('navClose');
     navHeader.classList.toggle('shadowBreak');
+    contentsContainer.classList.toggle('cntentAdjust');
     this.classList.toggle('brgBtnOpen');
     e.preventDefault();
     e.stopPropagation();
@@ -28,10 +29,6 @@ navToggle.addEventListener('click', function(e){
         navigation.removeEventListener('click', navMinListener)
     }
 });
-
-function navMinListener(){
-    navToggle.click();
-}
 
 
 
