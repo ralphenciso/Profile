@@ -38,10 +38,9 @@ body * {box-sizing: border-box}
 }
 
 .navHeader {
-    display: grid;
-    grid-template-columns: 80% auto;
+    display: flex;
     height: auto;
-    align-content: center;
+    justify-content: space-between;
 }
 
 #pic {
@@ -64,7 +63,6 @@ figcaption {
 .brgBtn {
     box-sizing: content-box;
     align-self: center;
-    justify-self: right;
     margin-right: 1em;
     height: 30px;
     width: 35px;
