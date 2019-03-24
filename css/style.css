@@ -12,7 +12,7 @@ body {
 
 /* nav container */
 .navigation {
-    background: url(/images/Grunge\ Green.jpg);
+    background: url('/images/Grunge\ Green.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     position: sticky;
@@ -206,6 +206,10 @@ body {
 
     .nav li {
         padding: 1rem;
+    }
+
+    .nav, .nav * {
+        display: block !important;
     }
 }
 
