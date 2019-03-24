@@ -215,9 +215,7 @@ body {
         padding: 1rem;
     }
 
-    #nav, #navul > li{
-        display: block;
-    }
+    
 }
 
 
@@ -263,6 +261,11 @@ body {
         background: #1B4D60;
     }
 
+    .navDeskClose .navHeader, .navDeskClose .nav {
+        display: none !important;
+    }
+
+
 
 }
 
@@ -285,6 +288,8 @@ body {
 
 .contentsContainer {
     color: white;
+    position: relative;
+    z-index: -1;
 
 }
 
