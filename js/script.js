@@ -1,32 +1,33 @@
-var navMenu = document.querySelector('.brgBtn')
-var nav = document.querySelector('#nav');
-var navHeader = document.querySelector('.navHeader');
-var navToggle = document.querySelector('.navSlide > img');
-var navigation = document.querySelector('.navigation');
-var navMin;
-var contentsContainer = document.querySelector('.contentsContainer')
-var moreTxt = document.querySelector('#moreText');
 
-
-navMenu.addEventListener('click', function(e){
-    nav.classList.toggle('navClose');
-    navHeader.classList.toggle('shadowBreak');
-    contentsContainer.classList.toggle('cntentAdjust');
-    this.classList.toggle('brgBtnOpen');
-    e.preventDefault();
-    e.stopPropagation();
+$('.navToggle').click(function(){
+    $(this).toggleClass('navToggleOpen');
+    $('.navHeader').toggleClass('boxShadow');
+    $('.nav li').fadeToggle('slow');
+    $('.nav').slideToggle();
 });
 
 
-navToggle.addEventListener('click', function(e){
-    e.stopPropagation();
-    navigation.classList.toggle('navMin'); 
-    contentsContainer.classList.toggle('marginAdjust');
+$('.navSlide').click(function(event){
+    $(this).toggleClass('navSlideClose');
+    $('.navigation').toggleClass('navigationClose');
+    $('.navFlex').toggleClass('navFlexClosed');
+    event.stopPropagation();
+});
 
-    if (navigation.classList.contains('navMin')) {
-        navigation.addEventListener('click', navMinListener)
+$('.navigation').click(function(){
+    if ($('.navigation').hasClass('navigationClose')) {
+    $('.navSlide').click();
+}
+});
+
+
+$('.sMore').click(function(){
+     var txt = $('#moreText').fadeToggle('fast');
+    
+    if (txt.css('display') === 'none'){
+        $(this).text('Show more . . .')
     } else {
-        navigation.removeEventListener('click', navMinListener)
+        $(this).text('Show less . . .')
     }
 });
 

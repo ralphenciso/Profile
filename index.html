@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ralph Enciso</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
 
+<div class="container">
+
+    <div class="navFlex">
     <div class="navigation">    
         <div class="navHeader">
-            <img src="images/profile.jpg" alt="pic" id="pic">
+            <div class="imageFrame"><img src="images/profile.jpg" alt="pic"></div>
             <figcaption> Ralph Enciso</figcaption>
-            <div class="brgBtn"><div></div></div>
+            <div class="navToggle"><div></div></div>
         </div>
 
-        <nav class="navClose" id="nav">
-            <ul>
+        <nav class="nav" id="">
+            <ul class="navul">
                 <li><a href="#aboutMe">ABOUT ME</a></li>
                 <li><a href="#experience">EXPERIENCE</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
@@ -26,11 +34,14 @@
             </ul>
         </nav>
         
-        <div class="navSlide"><img src="images/back-arrow-w.png"></div>
+        <div class="navSlide"><i class="fas fa-arrow-left"></i></div>
     </div>
-    
-    
+    </div>
+
+
     <div class="contentsContainer">
+        <div class="bgContainer"></div>
+
         <div id="aboutMe">
             <div class='abtMeHead'>
                 <h1> Hi, I'm Ralph.</h1>
@@ -39,26 +50,28 @@
             
             <div id='lineBreak'></div>
             
-            <input type="checkbox" id="t1">
             
             <p class='abtMeText'> 
-                I have worked in Finance and Accounting for around 8 years before finally deciding to try a career in the Tech Industry. <br>
-                At 27 years old, I am reinventing my self and restarting my career as a web developer. <br>
-                There is a lot to learn and catching-up is a challenge. <br> 
+                I have worked in Finance and Accounting for around 8 years before finally deciding to try a career in development. <br>
+                At 27 years old, I am reinventing my self, beginning as a web developer. <br>
+                There is so much to learn and catching-up is a challenge. <br> 
                 But as they say every long journey starts with a single step.<br> 
-                For me, building this page is my first step forward.<br>
+                For me, building this page is that first step forward.<br>
                 
                 <span id='moreText'>
-                    I started coding with Excel's VBA (Visual Basic for Applications) and developed some simple tools for daily use<br> 
+                    <br>
+                    I started coding with Excel's VBA (Visual Basic for Applications) and developed some simple tools for daily use.<br> 
                     
-                    Building tools and automating tasks is an interesting experience.<br>
+                    I enjoy building these tools and finding better ways to do things.<br>
                     
-                    Sharing what you created and helping others solve their problems however, <br> 
-                    I think, is the more fullfiling and greater end goal for being developer.
+                    The best part however is in sharing what I created and helping others solve their problems. <br> 
+                    
+                    And this I think is one reason why I want to become a developer.
                 </span>
             </p>
+
+            <button class="sMore">Show more . . .</button>
             
-            <label for="t1" class="sMore1"> </label>
             
         </div>
         
@@ -68,25 +81,17 @@
         <div id="projects" style="height: 3000px">projects</div>
         
         
-
-
-
-
-        
     </div>
 
+</div>
+
+
+</div>
 
 
 
-
-
-
-
-
-
-
-
-
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 
 <script src="js/script.js"></script>
 
