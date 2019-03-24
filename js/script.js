@@ -41,17 +41,12 @@ $('.navSlide').click(function(event){
     nv.toggleClass('navDeskClose');
 
     if (nv.hasClass('navDeskClose')) {
-    $('.navHeader').hide();
-    $('.nav').hide();
     $(this).addClass('navSlideClose');
     $('.navFlex').addClass('navFlexClosed');
 
     } else {
     $(this).removeClass('navSlideClose');
     $('.navFlex').removeClass('navFlexClosed');
-    $('.navHeader').show();
-    $('.nav li').show();
-    $('.nav').show();
         
         
     }

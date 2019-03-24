@@ -35,7 +35,7 @@ body {
         padding: 15px 0 15px 0;
         font-size: 1.2rem;
         min-height: 600px;
-        transition: transform .4s ease-in-out;
+        transition: transform .6s ease-in-out; 
     }
 }
 
@@ -116,7 +116,7 @@ body {
     background: white;
     position: absolute;
     top:0;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 /* toggle mid line */
@@ -126,7 +126,7 @@ body {
     background: white;
     margin: 10px auto 0 auto; /* to center, needs to be adjusted when header font size changes */
     border-radius: 3px;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 
@@ -139,7 +139,7 @@ body {
     background: white;
     position: absolute;
     bottom:0;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 
@@ -261,6 +261,12 @@ body {
         background: #1B4D60;
     }
 
+    .navDeskClose:hover {
+        background: #211174;
+    }
+
+
+
     .navDeskClose .navHeader, .navDeskClose .nav {
         display: none !important;
     }
@@ -361,13 +367,16 @@ body {
     .navFlex {
         flex-basis: 25%;
         max-width: 320px;
-        transition: flex .4s ease-in-out;
+        transition: flex .6s ease-in-out;
+        min-width: 0;
     }
 
     .navFlexClosed{
         flex-basis: 60px;
         min-width: 60px;
     }
+
+
 
     .bgContainer {display: none}
 
@@ -376,7 +385,7 @@ body {
         width: 100%;
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         height: 5000px;
     }
     
@@ -385,10 +394,18 @@ body {
         text-shadow: none;
     }
 
-    #aboutMe{
-        flex:0 0 100vh;
-        margin: 8% 3%;
+    .flexitem {
+        flex: 0 0 100vh;
+        width: 100%;
+        margin: auto;
+        border: 1px solid black;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
 
+    #aboutMe{
+        padding-left: 60px;
     }
 
     .abtMeHead {
