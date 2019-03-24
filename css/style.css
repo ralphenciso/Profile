@@ -174,7 +174,7 @@ body {
 } 
 @media (min-width: 768px){
     .nav {
-        margin-top: 100px;
+        margin-top: auto;
         margin-bottom: auto;
     }
 
@@ -289,16 +289,19 @@ body {
 .contentsContainer {
     color: white;
     position: relative;
-    z-index: -1;
-
+    z-index: 1;
 }
 
 #aboutMe {
     padding: 25px 40px;
+    text-shadow: 1px 1px 5px #000;
 }
+
+
 
 .abtMeHead {
     padding: 0;
+
 }
 
 .abtMeHead h1{
@@ -307,7 +310,7 @@ body {
 
 #lineBreak {
     height: 3px;
-    background-color: #3b81838f;
+    background-color: #3b8183;
     border-radius: 1px;
 }
 
@@ -325,9 +328,9 @@ body {
 
 .sMore {
     background: transparent;
-    border: 1px solid lightgray;
+    border: 1px solid lightslategray;
     border-radius: 4px;
-    color: lightgray;
+    color: lightslategray;
     font-family: 'Raleway';
     padding: 5px 5px;
     font-size: .9rem;
@@ -346,6 +349,7 @@ body {
 .navFlex {
     position: sticky;
     top:0;
+    z-index: 900;
 }
 
 @media (min-width: 768px){
@@ -365,11 +369,46 @@ body {
         min-width: 60px;
     }
 
+    .bgContainer {display: none}
 
-    .Container{
-        background: linear-gradient(#000, #fff);
+    .contentsContainer { 
+        flex-basis: auto;
         width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        height: 5000px;
+    }
+    
+    .contentsContainer * { 
+        color: black;
+        text-shadow: none;
+    }
+
+    #aboutMe{
+        flex:0 0 100vh;
+        margin: 8% 3%;
 
     }
 
+    .abtMeHead {
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+
+    }
+
+    .abtMeText {
+        line-height: 2.5rem;
+
+    }
+
+
+    #lineBreak{
+        max-width: 1200px;
+        height: 3px;
+        border-radius: 2px;
+    }
+
+
 }
+

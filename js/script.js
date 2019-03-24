@@ -70,13 +70,14 @@ $('.navigation').click(function(){
 
 
 $('.sMore').click(function(){
-     var txt = $('#moreText').fadeToggle('fast');
+     var txt = $('#moreText').fadeToggle('fast', function(){
     
-    if (txt.css('display') === 'none'){
-        $(this).text('Show more . . .')
-    } else {
-        $(this).text('Show less . . .')
-    }
+        if (txt.css('display') === 'none'){
+            $('.sMore').text('Show more . . .');
+        } else {
+            $('.sMore').text('Show less . . .');
+        };
+});
 });
 
 
