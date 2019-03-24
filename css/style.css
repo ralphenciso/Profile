@@ -17,12 +17,15 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     z-index: 999;
+    position: sticky;
+    top:0;
 
 }
 
 @media (min-width: 768px) {
     .navigation {
         height: 100vh;
+        width: 100%;
         max-width: 320px;
         background-size: 1000px;
         display:flex;
@@ -54,6 +57,10 @@ body {
     font-weight: 500;
 }
 
+@media (max-width: 767px){
+    .navHeader {display: flex !important;}
+}
+
 @media (min-width: 768px) {
     .navHeader{
         display: block;
@@ -69,7 +76,7 @@ body {
 }
 
 @media (max-width: 767px) {
-    .boxShadow {
+    .navMobileOpen .navHeader {
     box-shadow: 0 0px 20px 3px #4397B6; 
 }}
 
@@ -135,17 +142,19 @@ body {
     transition: all .3s ease-in-out;
 }
 
-.navToggleOpen div {
+
+
+.navMobileOpen .navToggle div {
     width: 0;
 }
 
-.navToggleOpen::before {
+.navMobileOpen .navToggle::before {
     transform: rotate(45deg);
     top: calc(50% - 2px);
     background: skyblue;
 }
 
-.navToggleOpen::after {
+.navMobileOpen .navToggle::after {
     transform: rotate(135deg);
     top: calc(50% - 2px);
     background: skyblue;
@@ -206,8 +215,8 @@ body {
         padding: 1rem;
     }
 
-    .nav, .nav * {
-        display: block !important;
+    #nav, #navul > li{
+        display: block;
     }
 }
 
@@ -249,12 +258,11 @@ body {
         right: 0;
     }
 
-    .navigationClose {
+    .navDeskClose {
         transform: translateX(calc(60px - 100%));
         background: #1B4D60;
     }
 
-    .navigationClose .navHeader, .navigationClose .nav {display: none !important};
 
 }
 
@@ -265,7 +273,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
     color: white;
-    position: fixed;
     height: 100vh;
     width: 100%;
     z-index: -1;
@@ -339,6 +346,7 @@ body {
 @media (min-width: 768px){
     .container {
         display: flex;
+        width: 100%;
         flex-flow: row nowrap;
     }
     .navFlex {
@@ -349,10 +357,14 @@ body {
 
     .navFlexClosed{
         flex-basis: 60px;
+        min-width: 60px;
     }
 
-    .navigation {
-        position:fixed;
+
+    .Container{
+        background: linear-gradient(#000, #fff);
+        width: 100%;
+
     }
 
 }

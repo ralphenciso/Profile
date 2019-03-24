@@ -1,24 +1,80 @@
 
 $('.navToggle').click(function(){
-    $(this).toggleClass('navToggleOpen');
-    $('.navHeader').toggleClass('boxShadow');
-    $('.nav li').fadeToggle('slow');
-    $('.nav').slideToggle();
+    var nv = $('.navigation')
+
+    nv.toggleClass('navMobileOpen');
+
+
+    if (nv.hasClass('navMobileOpen')){
+        $('.nav li').fadeIn('slow');
+        $('.nav').slideDown();
+    } else {
+        $('.navHeader').removeClass('boxShadow');
+        $('.nav li').fadeOut('fast');
+        $('.nav').slideUp();
+    }
+    
 });
+
+
+// handle nav state on window resize
+
+$(window).resize(function(){
+    
+    if (($(this).width() >= 768) && !($('.navigation').hasClass('navDeskClose')) )  {
+        $('.navigation').removeClass('navMobileOpen');
+        $('.nav li').show();
+        $('.nav').show();
+        $('.navHeader').show();
+
+    } else { if (($(this).width() >= 768) && ($('.navigation').hasClass('navDeskClose')) )
+        $('.navigation').removeClass('navMobileOpen');
+        $('.navHeader').hide();
+        $('.nav').hide();
+    }
+
+    if (($(this).width() < 768 && !($('.navigation').hasClass('navMobileOpen'))) )  {
+        $('.nav li').hide();
+        $('.nav').hide();
+    } else if (($(this).width() < 768 && ($('.navigation').hasClass('navMobileOpen')))) {
+        $('.nav li').show();
+        $('.nav').show();
+    }
+
+})
 
 
 $('.navSlide').click(function(event){
-    $(this).toggleClass('navSlideClose');
-    $('.navigation').toggleClass('navigationClose');
-    $('.navFlex').toggleClass('navFlexClosed');
+    var nv = $('.navigation')
+    nv.toggleClass('navDeskClose');
+
+    if (nv.hasClass('navDeskClose')) {
+    $('.navHeader').hide();
+    $('.nav').hide();
+    $(this).addClass('navSlideClose');
+    $('.navFlex').addClass('navFlexClosed');
+
+    } else {
+    $(this).removeClass('navSlideClose');
+    $('.navFlex').removeClass('navFlexClosed');
+    $('.navHeader').show();
+    $('.nav li').show();
+    $('.nav').show();
+        
+        
+    }
+
     event.stopPropagation();
 });
 
+
 $('.navigation').click(function(){
-    if ($('.navigation').hasClass('navigationClose')) {
+    if ($('.navigation').hasClass('navDeskClose')) {
     $('.navSlide').click();
 }
 });
+
+
 
 
 $('.sMore').click(function(){
