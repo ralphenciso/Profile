@@ -15,10 +15,8 @@ body {
     background: url('../images/Grunge Green.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    position: sticky;
-    top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 999;
 
 }
 
@@ -333,6 +331,11 @@ body {
     display: block;
 }
 
+.navFlex {
+    position: sticky;
+    top:0;
+}
+
 @media (min-width: 768px){
     .container {
         display: flex;
@@ -346,6 +349,10 @@ body {
 
     .navFlexClosed{
         flex-basis: 60px;
+    }
+
+    .navigation {
+        position:fixed;
     }
 
 }
