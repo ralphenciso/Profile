@@ -228,16 +228,15 @@ body {
         right: calc(50% - 30px);
     }
 
-    .navSlide i{
+    .navSlide img{
         color: white;
-        font-size: 2em;   
-        padding: 10px;
+        height: 60px;
         border-radius: 50%;
-        transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out, background .2s;
 
     }
 
-    .navSlide i:hover {
+    .navSlide img:hover {
         background: rgba(0,0,0,.6);
     }
 
